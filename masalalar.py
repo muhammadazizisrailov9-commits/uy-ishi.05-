@@ -64,3 +64,19 @@
 # for x in sorted_by_price(products):
 #     print(x)
 
+# n5
+
+def are_numbers_ascending (a:str)->bool:
+    lst=[]
+    for x in a.split():
+        if x.isdigit():
+            lst.append(int(x))
+    
+    for i in range(1,len(lst)):
+        if lst[i] <= lst[i-1]:
+            return False
+        return True
+
+
+print(are_numbers_ascending(input(">>> ")))
+
